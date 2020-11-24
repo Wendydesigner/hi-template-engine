@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>hi-template-engine</title>
+</head>
+<body>
+    <div class="showResult"></div>
+    <template id="template">
+        <h1>{{ data.name|lower }}</h1>
+        <p>{{ data.desc }}</p>
+
+        <h2>下面是if/else:</h2>
+        {%hi-if data.num > 10%}
+            <p>我是hi-if，大于10</p>
+        {%hi-elif data.num < 4%}
+            <p>我是hi-elif，小于4</p>
+        {%hi-else%}
+            <p>我是hi-else，大于4小于10</p>
+        {%/hi-if%}
+
+        <h2>下面是for:</h2>
+        {%foreach data.list as index => item %}
+            <p>循环第{{ index +1 }}次: {{item}}</p>
+        {%/foreach%}
+
+    </template>
+    <script type="module" src="./index.js"></script>
+    <script>
+        const data = {
+            name: 'LEARNING template',
+            desc: '实现一款小型模版引擎',
+            num: 8,
+            list: ['vue', 'react', 'angular']
+        }
+        const text = document.getElementById('#template').innerHTML;
+        document.getElementsByClassName('.showResult').innerHTML = new tpl().compile(text,data);
+    </script>
+
+</body>

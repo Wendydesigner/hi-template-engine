@@ -1,0 +1,22 @@
+{
+  "name": "hi-template-engine",
+  "version": "1.0.0",
+  "description": "a tony template engine for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wendydesigner/hi-template-engine.git"
+  },
+  "keywords": [
+    "engine"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wendydesigner/hi-template-engine/issues"
+  },
+  "homepage": "https://github.com/Wendydesigner/hi-template-engine#readme"
+}
