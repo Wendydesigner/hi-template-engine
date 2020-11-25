@@ -4,6 +4,7 @@
   "description": "a tony template engine for javascript",
   "main": "index.js",
   "scripts": {
+    "dev": "browserify index.js -o bundle.js",
     "test": "jest"
   },
   "repository": {

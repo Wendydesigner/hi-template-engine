@@ -18,18 +18,12 @@
             <p>我是hi-else，大于4小于10</p>
         {%/hi-if%}
 
+        {%each data.list as item%}
+            <p>循环{{index}}次：{{item}}</p>
+        {%/each%}
 
     </template>
-    <script type="module">
-        import tpl from './index.js';
-        const data = {
-            name: 'LEARNING template',
-            desc: '实现一款小型模版引擎',
-            num: 8,
-            list: ['vue', 'react', 'angular']
-        }
-        const text = document.getElementById('template').innerHTML;
-        document.getElementById('showResult').innerHTML = new tpl().compile(text,data);
+    <script src="./bundle.js">
     </script>
 
 </body>
